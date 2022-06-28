@@ -148,12 +148,9 @@ a.highlight:hover{
     flex: 1;
     }
 .float-child-left{
-    flex-direction: column;
         width:18%;
         float:left;    }
 .float-child-right{
-    flex-direction: column;
-
         width:80%;
         float:right;
     }
