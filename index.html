@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Fire Risk -- Flame Height</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Inter:wght@300;400;700;800;&family=Open+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/01d9812a13.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="https://srjouppi.github.io/points-unknown-coursework"> <-- Back </a>
+    </div>
+    <div class="header-container">
+        <h1>Wildfire flames in LaPlata County, Colorado could be the tallest in the state.</h1>
+        <h2>An analysis of wildfire risk data shows southern Colorado counties at risk for tallest flames.</h2>
+        <span class="dateline">June 27, 2022</span>
+        <hr/>
+    </div>
+    
+    <div class="text-container">
+        <p>Colorado, like many parts of the West, has experienced multiple record-breaking wildfires in recent years -- both in the amount of acres burned and the number of structures lost. This past December, for example, the Marshall Fire <a href="https://www.dailycamera.com/2022/06/25/marshall-fire-six-months-later-still-no-update-on-possible-cause/" target="_blank">destroyed more than 1,000 structures</a>, many of them homes.</p>
+        <p>Scientists with the USDA Forest Service created <a href="https://www.fs.usda.gov/managing-land/fire/wildfirerisk" target="_blank">a database</a> using a variety of ecological and parcel-level data and wildfire simulations to help communities assess the risk of damaging wildfires. One of those measurements is "Conditional Flame Length" -- the most likely length of a flame in a given location as a measure of fire intensity.</p>
+        <p>The Wildfire Risk to Communities data show that southern Colorado counties, which are also the most extremely droughted, are at the greatest risk to the most intense fires.</p>
+    </div>
+        <div class="chart-container">
+            <div class="float-child-left">
+                   <h3>Average Flame Length</h3>
+                   <em>Click the county to see it's average flame length as well as the number of housing units.</em>
+
+                    <div style="background-image: linear-gradient(to right, #fff, #FF5349);padding:5px;margin-top:10px;">0<span style="float:right;">8 feet</span></div>
+                    <hr/>
+                    <em>Zoom in to inspect drought levels for the county.</em>
+                    
+                   <div class="legend">
+                        <h4>Drought Level</h4>
+                        <div><span style="background-color: #F8DB8C"></span>Abnormally Dry</div>
+                        <div><span style="background-color: #F9B939"></span>Moderate Drought</div>
+                        <div><span style="background-color: #F98824"></span>Severe Drought</div>
+                        <div><span style="background-color: #FD353C"></span>Extreme Drought</div>
+                        <div><span style="background-color: #650303"></span>Exceptional Drought</div>
+
+                    </div>  
+            </div>
+            <div class="float-child-right">
+                <div id='map'></div>
+            </div>
+        </div>
+        <div></div>
+    <div class="text-container">
+        <p></p>
+        <p>One county stands out. La Plata, in the south western corner of the state, is home to more than 21,000 housing units. More than half of the county is in extreme drought while the rest is at a severe level. The average flame length in this county is one of the greatest in the state.</p>
+        <hr/>
+        <img src="img/durango-graphic.png"/>
+        <p><em>Data wrangling and sources in <a href="https://colab.research.google.com/drive/1eLaILN5zZkV7fwgOZ4_k2s3f1lrwIpsU?usp=sharing" target="_blank">this Google Colab notebook.</a></em></p>
+`
+    </div>
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>
